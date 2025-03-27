@@ -2,12 +2,12 @@
 
 This project is a simple **Weather API** built using **Flask**. It fetches weather data from an external API (e.g., [Visual Crossing](https://www.visualcrossing.com/)), caches results in **Redis**, and implements **rate limiting** to prevent abuse.  
 
-## 🚀 Features  
-✅ Fetches real-time weather data from an external API  
-✅ **In-memory caching** with Redis to improve performance  
-✅ **Rate limiting** (10 requests per minute per user) to prevent API abuse  
-✅ Uses **environment variables** for security (API keys, Redis credentials)  
-✅ Returns JSON-formatted responses  
+## Features  
+- Fetches real-time weather data from an external API  
+- **In-memory caching** with Redis to improve performance  
+- **Rate limiting** (10 requests per minute per user) to prevent API abuse  
+- Uses **environment variables** for security (API keys, Redis credentials)  
+- Returns JSON-formatted responses  
 
 ## 📌 How It Works  
 1. A user makes a **GET request** to `/weather/<location>` (e.g., `/weather/new-york`).  
@@ -17,7 +17,7 @@ This project is a simple **Weather API** built using **Flask**. It fetches weath
 3. Limits users to **10 requests per minute**.  
 4. If the weather API is down, the system handles errors gracefully.  
 
-## 🛠️ Setup Instructions  
+## Setup Instructions  
 ### 1️⃣ Clone the Repository  
 ```bash
 git clone https://github.com/your-username/weather-api.git
@@ -49,8 +49,8 @@ docker run -d --name redis-server -p 6379:6379 redis
 python app.py
 ```
 
-## 🔥 API Endpoints  
-### ✅ **Get Weather Data**  
+## API Endpoints  
+### - **Get Weather Data**  
 ```http
 GET /weather/<location>
 ```
@@ -81,13 +81,13 @@ If a user exceeds 10 requests per minute:
 ```
 
 ## 💡 Best Practices & Tips  
-✅ **Use environment variables** for API keys and sensitive credentials.  
-✅ **Implement proper error handling** (e.g., handling API failures).  
-✅ **Use Redis for caching** to reduce external API calls.  
-✅ **Set cache expiration** to avoid serving outdated weather data.  
-✅ **Implement rate limiting** using `flask-limiter` to prevent excessive usage.  
+- **Use environment variables** for API keys and sensitive credentials.  
+- **Implement proper error handling** (e.g., handling API failures).  
+- **Use Redis for caching** to reduce external API calls.  
+- **Set cache expiration** to avoid serving outdated weather data.  
+- **Implement rate limiting** using `flask-limiter` to prevent excessive usage.  
 
-## 📚 Additional Resources  
+## Additional Resources  
 🔗 [Visual Crossing Weather API (FREE)](https://www.visualcrossing.com/)  
 🔗 [Redis In-Memory Caching](https://redis.io/)  
 🔗 [Rate Limiting in Flask](https://flask-limiter.readthedocs.io/)  
